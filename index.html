@@ -3,8 +3,33 @@
   <meta charset="utf-8" />
   <title>About</title>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-</head>
+  </head>
 <body>
-  <div>제작자: ZeroCho</div>
+  <div id="app">{{ message }}</div>
+
+  <div id="app-2">
+      <span v-bind:title="message">
+          put mouse on
+      </span>
+  </div>
+
+  <div id="app-3">
+      <p v-if="seen">can you show me?</p>
+  </div>
+
+  <div id="app-4">
+      <ol>
+          <li v-for="todo in todos">
+              {{todo.text}}
+          </li>
+      </ol>
+    </div>
+    
+    <div id="app-5">
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
 </body>
 </html>
+
+<script src="index.js" type='text/javascript'></script>

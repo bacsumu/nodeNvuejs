@@ -4,6 +4,8 @@ var app = http.createServer(function(req,response){
     var url = req.url;
     if(req.url == '/'){
         url = '/index.html';
+    }else if(req.url == '/componet'){
+        url = '/component.html';
     }
     if(req.url == '/favicon.ico'){
         return response.writeHead(404);
